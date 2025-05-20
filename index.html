@@ -1,76 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+
     <title>Coming Soon</title>
-</head>
-<body class="flex h-screen bg-orange-500 text-white">
-
-    <main class="container mx-auto p-4">
-        <div class="flex flex-col items-center antialiased">
-            <header class="mx-auto mt-auto flex justify-between w-full items-center">
-                
-                <div class="text-left text-sm">
-                    <p>Index</p>
-                    <p>Hueman</p>
-                    <p class="mt-4">Collection</p>
-                </div>
-                <div class="text-right text-2xl">
-                    <p>Popular in many</p>
-               
-                </div>
-                <div class="text-right text-2xl">
-                    <p>Around the world</p>
-                </div>
-                
-            </header>
-
-            <div class="mt-4 flex justify-between w-full">
-
-                <div class="text-left">
-                    <p class="text-sm">UK</p>
-                    <p class="text-sm">US</p>
-                    <p class="text-sm">CA</p>
-                </div>
-                
-                <div class="text-right">
-                    <p class="text-sm"> UNITED STATES</p>
-                    <p class="text-sm">SOUTH KOREA</p>
-                    <p class="text-sm">JAPAN</p>
-                </div>
-            </div>
-            
-
-            <div class="w-full text-center">
-                <h1 class="text-5xl font-bold text-left">Our New Alpha Hueman collection</h1>
-                
-            </div>
-            <div class="w-full flex flex-row text-left items-baseline mt-4">
-                <div class="max-w-min">
-                    <p class=" mt-2 text-xl">New</p>
-                    <p class="min-w-max text-xl">Collection 24</p>
-                </div>
-
-                <div class="min-w-max flex flex-row items-baseline">
-                    
-                    <p class="min-w-max text-sm">Hue(C)Collection</p>
-                </div>
-                <div class="p-4">
-                    <div class="mt-4">
-                        <p class="text-sm">This fashion style, combining a bright satin blouse with casual jeans, offers a blend of elegance and comfort. It's popular for its versatility and can be worn in various settings, making it a favorite in many Western cultures.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Blur overlay -->
-            <!-- <div class="absolute inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center">
-                <h1 class="text-5xl font-bold text-white drop-shadow-lg">Coming Soon</h1>
-            </div> -->
-        </div>
-
-        
-    </main>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="typed-cursor.css">
+    <link rel="stylesheet" href="blur-fade-in.css">
     
-</body>
+</head>
+  <body class="bg-black text-white min-h-screen flex flex-col">
+    <!-- Fade-in blur overlay -->
+    <div class="fixed inset-0 z-10 bg-black/40 backdrop-blur-sm flex items-center justify-center animate-fade-in">
+      <h1 id="typing" class="text-3xl md:text-5xl font-bold drop-shadow-lg"></h1><span class="text-4xl md:text-5xl font-bold typed-cursor"></span>
+      
+    </div>
+
+    <div id="spinner" class="spinner fixed z-20 animate-fade-in">
+      <div class="dot1"></div>
+      <div class="dot2"></div>
+    </div>
+  
+
+    <video autoplay muted loop playsinline webkit-playsinline class="fixed top-0 left-0 w-full h-full object-cover z-[-1]">
+      <source src="video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <main class="relative flex-1 flex flex-col justify-between container mx-auto px-4 py-6 space-y-6 z-20">
+
+      <!-- Header -->
+      <header class="flex flex-col md:flex-row sm:flex-row justify-between gap-4 fade-in-image-10">
+        <div class="text-left text-sm">
+          <p class="text-sm ">Index</p>
+          <p class="text-sm">Hueman</p>
+          <p class="mt-4 text-sm">Collection</p>
+        </div>
+        <div class="text-right text-2xl text-bold">
+          <p>Popular in many</p>
+        </div>
+        <div class="text-right text-2xl text-bold">
+          <p>Around the world</p>
+        </div>
+      </header>
+
+      <!-- Region Info -->
+      <div class="flex flex-col sm:flex-row justify-between gap-6 fade-in-image-5">
+        <div class="text-left space-y-1">
+          <p class="text-sm">KE</p>
+          <p class="text-sm">TZ</p>
+          <p class="text-sm">SA</p>
+        </div>
+        <div class="text-right space-y-1">
+          <p class="text-sm">KENYA</p>
+          <p class="text-sm">TANZANIA</p>
+          <p class="text-sm">SOUTH AFRICA</p>
+        </div>
+      </div>
+
+       
+
+      <!-- Tagline Row -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 fade-in-image-15">
+      <!-- Column 1 -->
+      <div>
+        <p class="text-xl">New</p>
+        <p class="text-xl">Collection 25</p>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="text-sm text-end">
+        <p>Hue(C)Collection</p>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="text-sm">
+        <p>
+          This fashion style, combining a bright satin blouse with casual jeans,
+          offers a blend of elegance and comfort. It's popular for its versatility
+          and can be worn in various settings, making it a favorite in many Western cultures.
+        </p>
+      </div>
+    </div>
+
+    </main>
+
+      <script src="typed-text-anim.js"></script>
+  </body>
 </html>
