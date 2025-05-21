@@ -1,6 +1,6 @@
-body {
+ body {
     font-family: 'Roboto Condensed', sans-serif;
-}
+} 
 :roor {
     bg-orange-800: 
 }
@@ -9,6 +9,9 @@ body {
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
+}
+.panic{
+  font-family: 'Panic';
 }
 
 .spinner {
@@ -44,6 +47,14 @@ body {
 .fade-in-image-5 { animation: fadeIn 7s; }
 .fade-in-image-10 { animation: fadeIn 13s; }
 .fade-in-image-15 { animation: fadeIn 18s; }
+
+@font-face {
+    font-family: 'Panic';
+    src: url('Panic.ttf') format('ttf'),
+    font-weight: normal;
+    font-style: normal;
+}
+
 @-webkit-keyframes sk-rotate { 100% { -webkit-transform: rotate(360deg) }}
 @keyframes sk-rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
 
